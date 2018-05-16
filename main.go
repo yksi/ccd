@@ -73,24 +73,21 @@ func handleHttp () {
 
 		data, err := parseDeploy(req)
 
-		if err = validator.verify(data.Token); err == nil {
+		cmd := exec.Command("bash", "-c", data.Command)
+		cmd.Stdin = strings.NewReader("some input")
+		var output, errorMessage bytes.Buffer
+		cmd.Stdout = &output
+		cmd.Stderr = &errorMessage
 
-			cmd := exec.Command("bash", "-c", data.Command)
-			cmd.Stdin = strings.NewReader("some input")
-			var output, errorMessage bytes.Buffer
-			cmd.Stdout = &output
-			cmd.Stderr = &errorMessage
+		err := cmd.Run()
+		fmt.Println(cmd)
 
-			err := cmd.Run()
-			fmt.Println(cmd)
-
-			if nil != err {
-				response.Ok = false
-				response.Message = fmt.Sprintf("err: \"%s\"", err.Error())
-			} else {
-				response.Ok = true
-				response.Message = output.String()
-			}
+		if nil != err {
+			response.Ok = false
+			response.Message = fmt.Sprintf("err: \"%s\"", err.Error())
+		} else {
+			response.Ok = true
+			response.Message = output.String()
 		}
 
 		w.Header().Add("Content-Type", "application/json")
