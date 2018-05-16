@@ -116,5 +116,5 @@ func handleHttp () {
 		json.NewEncoder(w).Encode(response)
 	})
 
-	log.Fatal(http.ListenAndServe(":80", nil))
+	log.Fatal(http.ListenAndServe(":" + os.Getenv("PORT"), nil))
 }
