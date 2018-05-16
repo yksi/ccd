@@ -1,0 +1,14 @@
+{{define "notification"}}
+<h4>Logging</h4>
+{{ if .Allowed }}
+<a href="/" onclick="event.preventDefault(); $api.$$logout()">Logout</a>
+{{end}}
+<div class="area">
+    <div id="MessageBox" style="display:none">
+        <h3 class="text"></h3>
+        <i id="MessageCounter" style="display: none"></i>
+        <span>&nbsp;</span>
+        <a href="/" onclick="event.preventDefault(); $notification.close()" class="text-right">close</a>
+    </div>
+</div>
+{{end}}

@@ -1,0 +1,17 @@
+#DeployConsole {
+    overflow-y: scroll;
+    width: 100%;
+    background-color: #131a1d;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 5px 10px;
+    min-height: 90vh;
+    max-height: 90vh;
+}
+
+#DeployConsole #CommandInput {
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    font-size: 12px;
+}

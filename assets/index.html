@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>{{.Environment}} - CCD</title>
+        <link rel="stylesheet" href="/assets/style/look.css">
+        <link rel="stylesheet" href="/assets/style/deploy.css">
+    </head>
+    <body>
+        <div class="body-sidebar">
+            {{template "notification" .}}
+        </div>
+        <div class="body-container">{{template "deploy" .}}</div>
+        <script src="/assets/script/lib.js"></script>
+        <script src="/assets/script/login.js"></script>
+        <script src="/assets/script/deploy.js"></script>
+    </body>
+</html>

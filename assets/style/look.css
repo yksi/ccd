@@ -1,0 +1,70 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0 0 0 0;
+    padding: 0 10px 0 10px;
+}
+
+::selection {
+    background: #f75658; /* WebKit/Blink Browsers */
+}
+
+a, a:visited, a:active {
+    color: #37c7ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline #f75658;
+}
+
+input, button {
+    padding: 4px 8px;
+    outline: none;
+}
+
+button.action, input[type=submit].action {
+    color: white;
+    background: #375EAB;
+    border: 1px solid #375EAB;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.body-sidebar, .body-container {
+    display: grid;
+    float: left;
+}
+
+.body-sidebar {
+    min-width: 25%;
+    min-height: 98vh;
+}
+
+.body-sidebar .area {
+    background-size: 22%;
+    background-color: #ffffff;
+}
+
+.body-container{
+    width: 75%;
+}
+
+/** Pulse */
+
+#MessageBox {
+    width: 100%;
+    padding: 5px 10px;
+    color: #ffffff;
+    background-color: rgba(247, 86, 88, 0.88);
+}
+
+.text-left {
+    float: left;
+}
+
+.text-right {
+    float: right;
+}

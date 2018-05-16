@@ -1,0 +1,10 @@
+{{define "deploy"}}
+<div id="DeployConsole" onclick="$api.$$focus()">
+    <div></div>
+    <br>
+    <form onsubmit="event.preventDefault(); $api.$$deploy();" autocomplete="off">
+        <span>&dollar;</span>
+        <input type="text" id="CommandInput">
+    </form>
+</div>
+{{end}}
