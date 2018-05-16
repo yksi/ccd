@@ -79,7 +79,7 @@ func handleHttp () {
 		cmd.Stdout = &output
 		cmd.Stderr = &errorMessage
 
-		err := cmd.Run()
+		err = cmd.Run()
 		fmt.Println(cmd)
 
 		if nil != err {
